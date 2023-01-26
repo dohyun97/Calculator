@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Osap Calculator</title>
+<link rel="StyleSheet" href="res/mc.css" type="text/css" title="cse4413" media="screen, print"/>
+<script type="text/javascript" src="scripts/mc.js"></script>
+</head>
+<body>
+
+<header>
+<h1> Calculator by 4413-2022</h1>
+</header>
+<section>
+<nav>
+<a href="">Home</a>
+<a href="">About</a>
+</nav>
+</section>
+<BR />
+<fieldset>
+<legend>Calculator</legend>
+<form class="osapForm" onsubmit = "return validate()">
+
+ <label for="principal"> Principal<span id="principalerror">*</span><BR /> <small>(total loan amount after studies)</small></label>
+ <input type="number" step="0.01" id="principal" name="principal"></input><BR />
+ <label for="interest">Annual Interest Rate<span id="interesterror">*</span></label>
+ <input type="number" step="0.01" id="interest" name="interest"></input><BR />
+ <label for="period"> Payment Period <span id="perioderror">*</span><BR /> <small>(total number of months)</small></label>
+ <input type="number" step="0.01" id="period" name="period"></input><BR />
+ <button type="submit" name="out" value="html" formaction = "Osap" formmethod="POST">Submit</button><BR />
+ <button name="ajax" value="true" onclick="doSimpleAjax('http://localhost:8080/Kim-OsapCalc-v4/Osap/Ajax');return false;"> Submit (Ajax)</button>
+</form>
+ 
+ 
+
+		<div id="result"></div>
+  
+ </fieldset> 
+ 
+ <footer>Copyright EECS 4413Z - All rights reserved</footer> 
+ 
+</body>
+</html>
